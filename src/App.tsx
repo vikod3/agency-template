@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from "./contexts/AuthContext";
 import Index from "./pages/Index";
+import Minimal from "./pages/Minimal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -14,6 +15,7 @@ const queryClient = new QueryClient();
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Index />} />
+    <Route path="/minimal" element={<Minimal />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 );
