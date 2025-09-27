@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import TextType from "@/components/ui/TextType";
 const MinimalHeroSection = () => {
   return <section className="min-h-screen w-full bg-background flex flex-col">
       <div className="flex-1 flex flex-col justify-center items-center gap-20 px-4 relative">
@@ -25,7 +26,14 @@ const MinimalHeroSection = () => {
           duration: 0.8,
           delay: 0.6
         }}>
-            <span className="text-foreground font-normal leading-tight break-words text-4xl md:text-6xl lg:text-7xl xl:text-8xl">Step 1</span>
+            <TextType 
+              text={["Text typing effect", "for your websites", "Happy coding!"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+              className="text-foreground font-normal leading-tight break-words text-4xl md:text-6xl lg:text-7xl xl:text-8xl"
+            />
           </motion.div>
         </div>
       </div>
