@@ -27,7 +27,7 @@ const MinimalHeroSection = () => {
           delay: 0.6
         }}>
             <TextType 
-              text="Step 1"
+              text="Step 2"
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
