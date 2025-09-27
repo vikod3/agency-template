@@ -27,7 +27,7 @@ const MinimalHeroSection = () => {
           delay: 0.6
         }}>
             <TextType 
-              text={["Text typing effect", "for your websites", "Happy coding!"]}
+              text="Step 1"
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
