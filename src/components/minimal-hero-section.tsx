@@ -5,9 +5,10 @@ const MinimalHeroSection = () => {
       <div className="flex-1 flex flex-col justify-center items-center gap-20 px-4 relative">
         <div className="absolute inset-0 bg-background opacity-70 z-0"></div>
         <iframe 
-          src="https://customer-cbeadsgr09pnsezs.cloudflarestream.com/0f2f7fe2f6a205894f4e9747e26a7341/iframe?muted=true&autoplay=true&loop=true&controls=false"
-          className="absolute inset-0 w-full h-full object-cover z-[1] border-0" 
-          allow="autoplay; fullscreen"
+          src="https://iframe.videodelivery.net/0f2f7fe2f6a205894f4e9747e26a7341?muted=true&autoplay=true&loop=true&controls=false&preload=true"
+          className="absolute inset-0 w-full h-full z-[1] border-0 pointer-events-none" 
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="Background video"
           aria-label="Background video showcasing AI technology and web development"
         />
         <div className="absolute bottom-0 left-0 right-0 h-32 z-[2]" style={{
