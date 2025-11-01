@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 
 interface SchemaMarkupProps {
   type: 'organization' | 'website' | 'product' | 'faq' | 'video';
@@ -94,15 +94,30 @@ const SchemaMarkup = ({ type, data }: SchemaMarkupProps) => {
 
   const schema = getSchema();
   
-  if (!schema) return null;
+  useEffect(() => {
+    if (!schema) return;
+    
+    const scriptId = `schema-${type}`;
+    let script = document.querySelector(`script[id="${scriptId}"]`) as HTMLScriptElement;
+    
+    if (!script) {
+      script = document.createElement('script');
+      script.id = scriptId;
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    
+    script.textContent = JSON.stringify(schema);
+    
+    return () => {
+      const existingScript = document.querySelector(`script[id="${scriptId}"]`);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [schema, type]);
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return null;
 };
 
 export default SchemaMarkup;
