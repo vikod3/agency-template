@@ -4,11 +4,10 @@ const MinimalHeroSection = () => {
   return <section className="min-h-screen w-full bg-background flex flex-col">
       <div className="flex-1 flex flex-col justify-center items-center gap-20 px-4 relative">
         <div className="absolute inset-0 bg-background opacity-70 z-0"></div>
-        <div className="absolute inset-0 w-full h-full z-[1] overflow-hidden">
+        <div className="absolute inset-0 w-full h-full z-[1]">
           <iframe 
             src="https://iframe.videodelivery.net/0f2f7fe2f6a205894f4e9747e26a7341?muted=true&autoplay=true&loop=true&controls=false&preload=true"
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto border-0 pointer-events-none"
-            style={{ transform: 'translate(-50%, -50%)' }}
+            className="absolute inset-0 w-full h-full border-0 pointer-events-none"
             allow="autoplay; fullscreen; picture-in-picture"
             title="Background video"
             aria-label="Background video showcasing AI technology and web development"
