@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 w-full h-full z-[1]">
           <iframe
             src="https://iframe.videodelivery.net/0f2f7fe2f6a205894f4e9747e26a7341?muted=true&autoplay=true&loop=true&controls=false&preload=true"
-            className="absolute inset-0 w-full h-full border-0 pointer-events-none"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[100vw] h-full max-w-none border-0 pointer-events-none"
             allow="autoplay; fullscreen; picture-in-picture"
             title="Background video"
             aria-label="Background video showcasing AI technology and web development"
